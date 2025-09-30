@@ -1,7 +1,9 @@
-name: example
+name: Ticket checker
 on:
   schedule:
     - cron: '*/5 * * * *' # Every 5 minutes
+  workflow_dispatch:
+
 jobs:
   job:
     runs-on: ubuntu-latest
@@ -13,5 +15,5 @@ jobs:
           product-id: 211960
           schedule-id: 100001
           seat-id: 10000
-          slack-incoming-webhook-url: ${{ secrets.Discord_WEBHOOK_URL }}
-          message: '<@U4CF18RKL> 티켓사세요'
+          slack-incoming-webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          message: '@everyone There’s a ticket available, QUICK!'
