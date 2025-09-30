@@ -10,8 +10,8 @@ jobs:
       - name: Check Tickets
         uses: mooyoul/melon-ticket-actions@v1.1.0
         with:
-          product-id: 211992
+          product-id: 211960
           schedule-id: 100001
-          seat-id: 10015
+          seat-id: 10000
           slack-incoming-webhook-url: ${{ secrets.Discord_WEBHOOK_URL }}
           message: '<@U4CF18RKL> 티켓사세요'
